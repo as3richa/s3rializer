@@ -1,0 +1,11 @@
+dependencies:
+  pre:
+    - gem install bundler --pre
+
+  override:
+    - bundle install
+
+test:
+  override:
+    - bundle exec rubocop
+    - bundle exec rspec
