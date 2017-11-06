@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module S3rializer
   module DSL
     def serializes(klass)
@@ -24,7 +22,6 @@ module S3rializer
 
     def renamed_attribute(public_attribute, resource_attribute)
       assert_symbols!(public_attribute, resource_attribute)
-
       attribute_callbacks[public_attribute] = -> { @resource.__send__(resource_attribute) }
     end
 
@@ -34,7 +31,7 @@ module S3rializer
       transformation =
         if with.is_a?(Symbol)
           ->(value) { __send__(with, value) }
-        elsif with.is_a?(Class) && with < Presenter
+        elsif with.is_a?(Class) && with < Serializer
           ->(value) { with.compile(value) if value }
         else
           with

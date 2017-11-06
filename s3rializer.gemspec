@@ -12,9 +12,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/as3richa/s3rializer'
   s.license     = 'MIT-Zero'
 
-  # This is when class_attribute was introduced 
+  # This is when class_attribute was introduced
   s.add_runtime_dependency 'activesupport', '>= 3.0.0'
 
-  s.add_development_dependency 'rspec', '~> 3.5'
-  s.add_development_dependency 'rubocop', '~> 0.42.0'
+  s.add_development_dependency 'rspec', '~> 3.7'
+  s.add_development_dependency 'rubocop', '~> 0.51'
 end
