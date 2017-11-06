@@ -1,4 +1,4 @@
-require_relative 'lib/s3rializer.rb'
+require_relative 'lib/s3rializer/version.rb'
 
 Gem::Specification.new do |s|
   s.name        = 's3rializer'
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = 'Adam Richardson (as3richa)'
   s.files       = Dir['lib/**/*']
   s.homepage    = 'https://github.com/as3richa/s3rializer'
-  s.license     = 'MIT-Zero'
+  s.license     = 'Nonstandard' # MIT-Zero isn't on SPDX.org
 
   # This is when class_attribute was introduced
   s.add_runtime_dependency 'activesupport', '>= 3.0.0'
